@@ -4,6 +4,13 @@ const assessmentButton = document.getElementById('assessment');
 const resultDivided = document.getElementById('result-area');
 const tweetDivided = document.getElementById('tweet-area');
 
+const misskeyButton = document.getElementById('misskey-share-button');
+const mastodonButton = document.getElementById('mastodon-share-button');
+assessmentButton.addEventListener('click', () => {
+    misskeyButton.style.display = 'block';
+    mastodonButton.style.display = 'block';
+});
+
 assessmentButton.onclick = () => {
   const userName = userNameInput.value;
   if(userName.length === 0) {
